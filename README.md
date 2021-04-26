@@ -47,7 +47,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="/public/podcastr-home.png" alt="Podcastr Player">
+<img src="podcastr-home.png" alt="Podcastr Player">
 
 ### Built With
 
