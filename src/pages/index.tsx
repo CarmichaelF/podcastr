@@ -6,7 +6,10 @@ import { api } from '../services/api';
 import ptBR from 'date-fns/locale/pt-BR';
 import { convertDurationToTimeString } from '../util/convertDurationToTimeString';
 
+import Head from 'next/head';
+
 import styles from "./home.module.scss";
+import { usePlayer } from '../context/PlayerContext';
 
 type Episode = {
   id: string;
@@ -26,13 +29,20 @@ type HomeProps = {
 }
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
+  const { handlePlayList } = usePlayer();
+
+  const episodeList = [...latestEpisodes, ...allEpisodes];
+
   return (
     <div className={styles.home}>
+      <Head>
+        <title>Home | Podcastr</title>
+      </Head>
       <section className={styles["home-episodes__latest"]}>
         <h2>Últimos lançamentos</h2>
 
         <ul>
-          {latestEpisodes.map((ep) => {
+          {latestEpisodes.map((ep, index) => {
             return (
               <li key={ep.id}>
                 <Image
@@ -49,7 +59,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   <span>{ep.publishedAt}</span>
                   <span>{ep.durationAsString}</span>
                 </div>
-                <button type="button">
+                <button type="button" onClick={() => handlePlayList(episodeList, index)}>
                   <img src="/play-green.svg" alt="Tocar episódio" />
                 </button>
               </li>
@@ -71,7 +81,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
             </tr>
           </thead>
           <tbody>
-            {allEpisodes.map(ep => {
+            {allEpisodes.map((ep, index) => {
               return (<tr key={ep.id}>
                 <td className={styles["thumb"]}>
                   <Image
@@ -91,7 +101,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                 <td>{ep.durationAsString}</td>
                 <td>
                   <button type="button">
-                    <img src="/play-green.svg" alt="Tocar episódio" />
+                    <img src="/play-green.svg" alt="Tocar episódio" onClick={() => handlePlayList(episodeList, index + latestEpisodes.length)} />
                   </button></td>
               </tr>);
             })}
