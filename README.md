@@ -1,11 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 <br />
 <p align="center">
   <a href="https://github.com/CarmichaelF/podcastr">
@@ -139,18 +131,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Carmichael F. Pereira - [carmichaelferreira06@gmail.com](mailto:carmichaelferreira06@gmail.com)
 
 Project Link: [https://github.com/CarmichaelF/podcastr](https://github.com/CarmichaelF/podcastr)
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/CarmichaelF/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/CarmichaelF/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/CarmichaelF/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/CarmichaelF/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/CarmichaelF/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/CarmichaelF/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/CarmichaelF/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/CarmichaelF/repo/issues
-[license-shield]: https://img.shields.io/github/license/CarmichaelF/repo.svg?style=for-the-badge
-[license-url]: https://github.com/CarmichaelF/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/CarmichaelF
